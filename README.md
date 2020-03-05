@@ -14,7 +14,7 @@ Text data and Mathematica codes for the paper "Relating the Zipf ’s law to tex
     d. GutenbergAll_Split: split each files "text" into two halves (text_1.txt and text_2.txt) and tokenize them (texttokens_1.dat and texttokens_2.dat)
     
    
-  II. 350 text set is structured similarly
+  II. 350 text set
     a. Novels350: the original 350 texts were retrieved from http://novel.tingroom.com/.
     b. Novels350Proc: ...
     c. Novels350Reverse: ...
