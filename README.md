@@ -4,7 +4,7 @@ Text data and Mathematica codes for the paper "Relating the Zipf ’s law to tex
 1. Mathematica notebooks
   a. prep-split.nb: tokenization of strings and splitting texts into two halves.
   b. quantities-stats.nb: functions for calculating all quantities in the paper; examples for the 156 text set.
- 
+  
 2. Text data
   I. 156 text set
     a. GutenbergAll: the original 156 texts were retrieved from http://www.gutenberg.org/wiki/Category:Fiction_Bookshelf .
