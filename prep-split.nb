@@ -1,0 +1,688 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     32262,        680]
+NotebookOptionsPosition[     29971,        637]
+NotebookOutlinePosition[     30305,        652]
+CellTagsIndexPosition[     30262,        649]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Contraction expansion", "Subsection",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.766767891678206*^9, 3.7667679094123983`*^9}, 
+   3.766767961120707*^9, {3.7667680300290833`*^9, 3.766768031817627*^9}, {
+   3.7924239019011307`*^9, 
+   3.7924239091276817`*^9}},ExpressionUUID->"73c8b56e-ea80-4457-9745-\
+bea6e5be361e"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"clist", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\"\<ain't\>\"", "\[Rule]", "\"\<am not\>\""}], ",", 
+     RowBox[{"\"\<aren't\>\"", "\[Rule]", "\"\<are not\>\""}], ",", 
+     RowBox[{"\"\<can't\>\"", "\[Rule]", "\"\<cannot\>\""}], ",", 
+     RowBox[{"\"\<can't've\>\"", "\[Rule]", "\"\<cannot have\>\""}], ",", 
+     RowBox[{"\"\<'cause\>\"", "\[Rule]", "\"\<because\>\""}], ",", 
+     RowBox[{"\"\<could've\>\"", "\[Rule]", "\"\<could have\>\""}], ",", 
+     RowBox[{"\"\<couldn't\>\"", "\[Rule]", "\"\<could not\>\""}], ",", 
+     RowBox[{"\"\<couldn't've\>\"", "\[Rule]", "\"\<could not have\>\""}], 
+     ",", 
+     RowBox[{"\"\<didn't\>\"", "\[Rule]", "\"\<did not\>\""}], ",", 
+     RowBox[{"\"\<doesn't\>\"", "\[Rule]", "\"\<does not\>\""}], ",", 
+     RowBox[{"\"\<don't\>\"", "\[Rule]", "\"\<do not\>\""}], ",", 
+     RowBox[{"\"\<hadn't\>\"", "\[Rule]", "\"\<had not\>\""}], ",", 
+     RowBox[{"\"\<hadn't've\>\"", "\[Rule]", "\"\<had not have\>\""}], ",", 
+     RowBox[{"\"\<hasn't\>\"", "\[Rule]", "\"\<has not\>\""}], ",", 
+     RowBox[{"\"\<haven't\>\"", "\[Rule]", "\"\<have not\>\""}], ",", 
+     RowBox[{"\"\<he'd\>\"", "\[Rule]", "\"\<he would\>\""}], ",", 
+     RowBox[{"\"\<he'd've\>\"", "\[Rule]", "\"\<he would have\>\""}], ",", 
+     RowBox[{"\"\<he'll\>\"", "\[Rule]", "\"\<he will\>\""}], ",", 
+     RowBox[{"\"\<he'll've\>\"", "\[Rule]", "\"\<he will have\>\""}], ",", 
+     RowBox[{"\"\<he's\>\"", "\[Rule]", "\"\<he is\>\""}], ",", 
+     RowBox[{"\"\<how'd\>\"", "\[Rule]", "\"\<how did\>\""}], ",", 
+     RowBox[{"\"\<how'd'y\>\"", "\[Rule]", "\"\<how do you\>\""}], ",", 
+     RowBox[{"\"\<how'll\>\"", "\[Rule]", "\"\<how will\>\""}], ",", 
+     RowBox[{"\"\<how's\>\"", "\[Rule]", "\"\<how is\>\""}], ",", 
+     RowBox[{"\"\<i'd\>\"", "\[Rule]", "\"\<i would\>\""}], ",", 
+     RowBox[{"\"\<i'd've\>\"", "\[Rule]", "\"\<i would have\>\""}], ",", 
+     RowBox[{"\"\<i'll\>\"", "\[Rule]", "\"\<i will\>\""}], ",", 
+     RowBox[{"\"\<i'll've\>\"", "\[Rule]", "\"\<i will have\>\""}], ",", 
+     RowBox[{"\"\<i'm\>\"", "\[Rule]", "\"\<i am\>\""}], ",", 
+     RowBox[{"\"\<i've\>\"", "\[Rule]", "\"\<i have\>\""}], ",", 
+     RowBox[{"\"\<isn't\>\"", "\[Rule]", "\"\<is not\>\""}], ",", 
+     RowBox[{"\"\<it'd\>\"", "\[Rule]", "\"\<it had\>\""}], ",", 
+     RowBox[{"\"\<it'd've\>\"", "\[Rule]", "\"\<it would have\>\""}], ",", 
+     RowBox[{"\"\<it'll\>\"", "\[Rule]", "\"\<it will\>\""}], ",", 
+     RowBox[{"\"\<it'll've\>\"", "\[Rule]", "\"\<it will have\>\""}], ",", 
+     RowBox[{"\"\<it's\>\"", "\[Rule]", "\"\<it is\>\""}], ",", 
+     RowBox[{"\"\<let's\>\"", "\[Rule]", "\"\<let us\>\""}], ",", 
+     RowBox[{"\"\<ma'am\>\"", "\[Rule]", "\"\<madam\>\""}], ",", 
+     RowBox[{"\"\<mayn't\>\"", "\[Rule]", "\"\<may not\>\""}], ",", 
+     RowBox[{"\"\<might've\>\"", "\[Rule]", "\"\<might have\>\""}], ",", 
+     RowBox[{"\"\<mightn't\>\"", "\[Rule]", "\"\<might not\>\""}], ",", 
+     RowBox[{"\"\<mightn't've\>\"", "\[Rule]", "\"\<might not have\>\""}], 
+     ",", 
+     RowBox[{"\"\<must've\>\"", "\[Rule]", "\"\<must have\>\""}], ",", 
+     RowBox[{"\"\<mustn't\>\"", "\[Rule]", "\"\<must not\>\""}], ",", 
+     RowBox[{"\"\<mustn't've\>\"", "\[Rule]", "\"\<must not have\>\""}], ",", 
+     
+     RowBox[{"\"\<needn't\>\"", "\[Rule]", "\"\<need not\>\""}], ",", 
+     RowBox[{"\"\<needn't've\>\"", "\[Rule]", "\"\<need not have\>\""}], ",", 
+     
+     RowBox[{"\"\<o'clock\>\"", "\[Rule]", "\"\<of the clock\>\""}], ",", 
+     RowBox[{"\"\<oughtn't\>\"", "\[Rule]", "\"\<ought not\>\""}], ",", 
+     RowBox[{"\"\<oughtn't've\>\"", "\[Rule]", "\"\<ought not have\>\""}], 
+     ",", 
+     RowBox[{"\"\<shan't\>\"", "\[Rule]", "\"\<shall not\>\""}], ",", 
+     RowBox[{"\"\<sha'n't\>\"", "\[Rule]", "\"\<shall not\>\""}], ",", 
+     RowBox[{"\"\<shan't've\>\"", "\[Rule]", "\"\<shall not have\>\""}], ",", 
+     
+     RowBox[{"\"\<she'd\>\"", "\[Rule]", "\"\<she would\>\""}], ",", 
+     RowBox[{"\"\<she'd've\>\"", "\[Rule]", "\"\<she would have\>\""}], ",", 
+     RowBox[{"\"\<she'll\>\"", "\[Rule]", "\"\<she will\>\""}], ",", 
+     RowBox[{"\"\<she'll've\>\"", "\[Rule]", "\"\<she will have\>\""}], ",", 
+     RowBox[{"\"\<she's\>\"", "\[Rule]", "\"\<she is\>\""}], ",", 
+     RowBox[{"\"\<should've\>\"", "\[Rule]", "\"\<should have\>\""}], ",", 
+     RowBox[{"\"\<shouldn't\>\"", "\[Rule]", "\"\<should not\>\""}], ",", 
+     RowBox[{"\"\<shouldn't've\>\"", "\[Rule]", "\"\<should not have\>\""}], 
+     ",", 
+     RowBox[{"\"\<so've\>\"", "\[Rule]", "\"\<so have\>\""}], ",", 
+     RowBox[{"\"\<so's\>\"", "\[Rule]", "\"\<so is\>\""}], ",", 
+     RowBox[{"\"\<that'd\>\"", "\[Rule]", "\"\<that would\>\""}], ",", 
+     RowBox[{"\"\<that'd've\>\"", "\[Rule]", "\"\<that would have\>\""}], ",", 
+     RowBox[{"\"\<that's\>\"", "\[Rule]", "\"\<that is\>\""}], ",", 
+     RowBox[{"\"\<there'd\>\"", "\[Rule]", "\"\<there had\>\""}], ",", 
+     RowBox[{"\"\<there'd've\>\"", "\[Rule]", "\"\<there would have\>\""}], 
+     ",", 
+     RowBox[{"\"\<there's\>\"", "\[Rule]", "\"\<there is\>\""}], ",", 
+     RowBox[{"\"\<they'd\>\"", "\[Rule]", "\"\<they would\>\""}], ",", 
+     RowBox[{"\"\<they'd've\>\"", "\[Rule]", "\"\<they would have\>\""}], ",", 
+     RowBox[{"\"\<they'll\>\"", "\[Rule]", "\"\<they will\>\""}], ",", 
+     RowBox[{"\"\<they'll've\>\"", "\[Rule]", "\"\<they will have\>\""}], ",", 
+     RowBox[{"\"\<they're\>\"", "\[Rule]", "\"\<they are\>\""}], ",", 
+     RowBox[{"\"\<they've\>\"", "\[Rule]", "\"\<they have\>\""}], ",", 
+     RowBox[{"\"\<to've\>\"", "\[Rule]", "\"\<to have\>\""}], ",", 
+     RowBox[{"\"\<wasn't\>\"", "\[Rule]", "\"\<was not\>\""}], ",", 
+     RowBox[{"\"\<we'd\>\"", "\[Rule]", "\"\<we had\>\""}], ",", 
+     RowBox[{"\"\<we'd've\>\"", "\[Rule]", "\"\<we would have\>\""}], ",", 
+     RowBox[{"\"\<we'll\>\"", "\[Rule]", "\"\<we will\>\""}], ",", 
+     RowBox[{"\"\<we'll've\>\"", "\[Rule]", "\"\<we will have\>\""}], ",", 
+     RowBox[{"\"\<we're\>\"", "\[Rule]", "\"\<we are\>\""}], ",", 
+     RowBox[{"\"\<we've\>\"", "\[Rule]", "\"\<we have\>\""}], ",", 
+     RowBox[{"\"\<weren't\>\"", "\[Rule]", "\"\<were not\>\""}], ",", 
+     RowBox[{"\"\<what'll\>\"", "\[Rule]", "\"\<what will\>\""}], ",", 
+     RowBox[{"\"\<what'll've\>\"", "\[Rule]", "\"\<what will have\>\""}], ",", 
+     RowBox[{"\"\<what're\>\"", "\[Rule]", "\"\<what are\>\""}], ",", 
+     RowBox[{"\"\<what's\>\"", "\[Rule]", "\"\<what is\>\""}], ",", 
+     RowBox[{"\"\<what've\>\"", "\[Rule]", "\"\<what have\>\""}], ",", 
+     RowBox[{"\"\<when's\>\"", "\[Rule]", "\"\<when is\>\""}], ",", 
+     RowBox[{"\"\<when've\>\"", "\[Rule]", "\"\<when have\>\""}], ",", 
+     RowBox[{"\"\<where'd\>\"", "\[Rule]", "\"\<where did\>\""}], ",", 
+     RowBox[{"\"\<where's\>\"", "\[Rule]", "\"\<where is\>\""}], ",", 
+     RowBox[{"\"\<where've\>\"", "\[Rule]", "\"\<where have\>\""}], ",", 
+     RowBox[{"\"\<who'll\>\"", "\[Rule]", "\"\<who will\>\""}], ",", 
+     RowBox[{"\"\<who'll've\>\"", "\[Rule]", "\"\<who will have\>\""}], ",", 
+     RowBox[{"\"\<who's\>\"", "\[Rule]", "\"\<who is\>\""}], ",", 
+     RowBox[{"\"\<who've\>\"", "\[Rule]", "\"\<who have\>\""}], ",", 
+     RowBox[{"\"\<why's\>\"", "\[Rule]", "\"\<why is\>\""}], ",", 
+     RowBox[{"\"\<why've\>\"", "\[Rule]", "\"\<why have\>\""}], ",", 
+     RowBox[{"\"\<will've\>\"", "\[Rule]", "\"\<will have\>\""}], ",", 
+     RowBox[{"\"\<won't\>\"", "\[Rule]", "\"\<will not\>\""}], ",", 
+     RowBox[{"\"\<won't've\>\"", "\[Rule]", "\"\<will not have\>\""}], ",", 
+     RowBox[{"\"\<would've\>\"", "\[Rule]", "\"\<would have\>\""}], ",", 
+     RowBox[{"\"\<wouldn't\>\"", "\[Rule]", "\"\<would not\>\""}], ",", 
+     RowBox[{"\"\<wouldn't've\>\"", "\[Rule]", "\"\<would not have\>\""}], 
+     ",", 
+     RowBox[{"\"\<y'all\>\"", "\[Rule]", "\"\<you all\>\""}], ",", 
+     RowBox[{"\"\<y'alls\>\"", "\[Rule]", "\"\<you alls\>\""}], ",", 
+     RowBox[{"\"\<y'all'd\>\"", "\[Rule]", "\"\<you all would\>\""}], ",", 
+     RowBox[{"\"\<y'all'd've\>\"", "\[Rule]", "\"\<you all would have\>\""}], 
+     ",", 
+     RowBox[{"\"\<y'all're\>\"", "\[Rule]", "\"\<you all are\>\""}], ",", 
+     RowBox[{"\"\<y'all've\>\"", "\[Rule]", "\"\<you all have\>\""}], ",", 
+     RowBox[{"\"\<you'd\>\"", "\[Rule]", "\"\<you had\>\""}], ",", 
+     RowBox[{"\"\<you'd've\>\"", "\[Rule]", "\"\<you would have\>\""}], ",", 
+     RowBox[{"\"\<you'll\>\"", "\[Rule]", "\"\<you you will\>\""}], ",", 
+     RowBox[{"\"\<you'll've\>\"", "\[Rule]", "\"\<you you will have\>\""}], 
+     ",", 
+     RowBox[{"\"\<you're\>\"", "\[Rule]", "\"\<you are\>\""}], ",", 
+     RowBox[{"\"\<you've\>\"", "\[Rule]", "\"\<you have\>\""}], ",", 
+     RowBox[{"\"\<'em\>\"", "\[Rule]", "\"\<them\>\""}]}], "}"}]}], 
+  ";"}]], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.76676690580232*^9, 3.766766912347224*^9}, 
+   3.766767961123049*^9, {3.766780529689712*^9, 3.766780538668503*^9}},
+ CellLabel->"In[3]:=",ExpressionUUID->"4df1976b-ce9f-4e44-b17f-3705e290e52e"]
+}, Open  ]],
+
+Cell["\<\
+\[OpenCurlyDoubleQuote]funcphraserule\[CloseCurlyDoubleQuote] stores function \
+word rules such {\[OpenCurlyDoubleQuote]able \
+to\[CloseCurlyDoubleQuote]\[Rule]\[CloseCurlyDoubleQuote]able-to\
+\[CloseCurlyDoubleQuote], \[OpenCurlyDoubleQuote]a bit of\
+\[CloseCurlyDoubleQuote]\[Rule]\[CloseCurlyDoubleQuote]a-bit-of\
+\[CloseCurlyDoubleQuote]...} so that these phrases are treated as single \
+words latter on. \
+\>", "Text",
+ CellChangeTimes->{{3.792365944348794*^9, 
+  3.7923660611454573`*^9}},ExpressionUUID->"ba7c043d-061c-41de-8480-\
+5766ef996977"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"funcwords", "=", 
+   RowBox[{"StringSplit", "[", 
+    RowBox[{
+     RowBox[{"ToLowerCase", "[", 
+      RowBox[{"Import", "[", "\"\</path_to/functionwords.txt\>\"", "]"}], 
+      "]"}], ",", "\"\<\\n\>\""}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"funcphraserule", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"StringReplace", "[", 
+        RowBox[{"#", ",", 
+         RowBox[{"\"\<-\>\"", "\[Rule]", "\"\< \>\""}]}], "]"}], "\[Rule]", 
+       "#"}], ")"}], "&"}], "/@", 
+    RowBox[{"Select", "[", 
+     RowBox[{"funcwords", ",", 
+      RowBox[{
+       RowBox[{"StringMatchQ", "[", 
+        RowBox[{"#", ",", "\"\<*-*\>\""}], "]"}], "&"}]}], "]"}]}]}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.783967777085915*^9, 3.7839677987211523`*^9}, {
+   3.792424396459683*^9, 3.792424396626152*^9}, 
+   3.792427520068037*^9},ExpressionUUID->"c21ff462-2051-4951-a27d-\
+652c9f9e503f"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Tokenizing a string ",
+ StyleBox["str",
+  FontSlant->"Italic"]
+}], "Subsection",
+ CellChangeTimes->{{3.792424110799938*^9, 
+  3.792424151114788*^9}},ExpressionUUID->"d1be2427-4018-45e7-9af9-\
+3aa5d31bc4e0"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"preprocessor", "[", "str_String", "]"}], ":=", 
+   RowBox[{"StringReplace", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"StringReplace", "[", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"StringReplace", "[", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"ToLowerCase", "[", 
+          RowBox[{"StringTrim", "[", "str", "]"}], 
+          RowBox[{"(*", "1.", "*)"}], "]"}], ",", "\[IndentingNewLine]", 
+         "clist"}], 
+        RowBox[{"(*", 
+         RowBox[{"2.", " ", "expand", " ", "contractions"}], "*)"}], "]"}], 
+       ",", "\[IndentingNewLine]", "funcphraserule"}], 
+      RowBox[{"(*", 
+       RowBox[{
+        RowBox[{"3.", " ", "\"\<be able to\>\""}], "\[Rule]", 
+        "\"\<be-able-to\>\""}], "*)"}], "]"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"\"\<'s\>\"", "\[Rule]", "\"\<\>\""}]}], 
+    RowBox[{"(*", 
+     RowBox[{
+      RowBox[{"4.", " ", "\"\<that dog's legs\>\""}], "\[Rule]", 
+      "\"\<that dog legs\>\""}], "*)"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"takeTokens", "[", "str_String", "]"}], ":=", 
+   RowBox[{"StringSplit", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"StringReplace", "[", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"StringReplace", "[", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"StringReplace", "[", 
+          RowBox[{
+           RowBox[{"preprocessor", "[", "str", "]"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"Except", "[", 
+             RowBox[{"\"\<-\>\"", ",", "PunctuationCharacter"}], "]"}], 
+            "\[Rule]", "\"\< \>\""}]}], 
+          RowBox[{"(*", 
+           RowBox[{"5.", " ", "\"\<self-esteem\>\"", " ", "kept"}], "*)"}], 
+          "]"}], ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"\"\<-\>\"", "~~", 
+           RowBox[{"\"\<-\>\"", ".."}]}], "\[Rule]", "\"\< \>\""}]}], 
+        RowBox[{"(*", 
+         RowBox[{
+         "6.", " ", "get", " ", "rid", " ", "of", " ", "\"\<--\>\"", " ", 
+          "or", " ", "\"\<---\>\""}], "*)"}], "]"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"DigitCharacter", "\[Rule]", "\"\<\>\""}]}], 
+      RowBox[{"(*", "7.", " ", "*)"}], "]"}], ",", "\[IndentingNewLine]", 
+     "Whitespace"}], 
+    RowBox[{"(*", 
+     RowBox[{
+      RowBox[{"8.", " ", "split", " ", "at", " ", "\"\< \>\""}], ",", " ", 
+      "\"\<    \>\"", ",", " ", "\"\<\\t\>\"", ",", " ", 
+      RowBox[{"\"\<\\n\>\"", " ", 
+       RowBox[{"etc", "."}]}]}], "*)"}], "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.766960674360033*^9, 3.766960698396891*^9}, 
+   3.7669608126687193`*^9, {3.7669610254304457`*^9, 3.7669610753155613`*^9}, {
+   3.7669611057598763`*^9, 3.76696111607677*^9}, 3.766961146270556*^9, {
+   3.7669620483245373`*^9, 3.7669621030068693`*^9}},
+ CellLabel->"In[14]:=",ExpressionUUID->"a4b5de4f-50f3-4402-8c13-8cf1e519f94d"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Splitting text into two halves by applying Newton\[CloseCurlyQuote]s \
+method", "Subsection",
+ CellChangeTimes->{{3.7924244705454206`*^9, 
+  3.7924245463144493`*^9}},ExpressionUUID->"adf0c312-dbaf-42aa-b7d1-\
+e21d027b6efa"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"splitTextNewton", "[", "file_String", "]"}], ":=", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "text", ",", "tokens", ",", "tokens1", ",", "tokens2", ",", "halfpos", 
+       RowBox[{"(*", 
+        RowBox[{"overall", " ", "half", " ", "position"}], "*)"}], ",", 
+       "cuts", ",", "pb", 
+       RowBox[{"(*", 
+        RowBox[{"begin", " ", "indx"}], "*)"}], ",", "ph", 
+       RowBox[{"(*", 
+        RowBox[{"half", " ", "indx"}], "*)"}], ",", "pe", 
+       RowBox[{"(*", 
+        RowBox[{"end", " ", "indx"}], "*)"}], ",", "trail", ",", "traillen", 
+       ",", "subtext1", ",", "subtext2"}], "}"}], ",", "\[IndentingNewLine]", 
+     
+     RowBox[{
+      RowBox[{"text", "=", 
+       RowBox[{"Import", "[", "file", "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"tokens", "=", 
+       RowBox[{"takeTokens", "[", "text", "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"tokens1", ",", "tokens2"}], "}"}], "=", 
+       RowBox[{"Partition", "[", 
+        RowBox[{"tokens", ",", 
+         RowBox[{"UpTo", "[", 
+          RowBox[{"Ceiling", "[", 
+           RowBox[{
+            RowBox[{"Length", "[", "tokens", "]"}], "/", "2"}], "]"}], 
+          "]"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"halfpos", "=", 
+       RowBox[{"Length", "[", "tokens1", "]"}]}], ";", "\[IndentingNewLine]", 
+      "\[IndentingNewLine]", 
+      RowBox[{"(*", 
+       RowBox[{
+        RowBox[{"Newton", "'"}], "s", " ", "method"}], "*)"}], 
+      "\[IndentingNewLine]", 
+      RowBox[{"cuts", "=", 
+       RowBox[{"Union", "[", 
+        RowBox[{"Flatten", "[", 
+         RowBox[{"StringPosition", "[", 
+          RowBox[{"text", ",", 
+           RowBox[{"(*", 
+            RowBox[{"blanks", " ", "and", " ", "puncts"}], "*)"}], 
+           "\[IndentingNewLine]", 
+           RowBox[{"WhitespaceCharacter", "|", "PunctuationCharacter"}]}], 
+          "]"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"pb", "=", "0"}], ";", "\[IndentingNewLine]", 
+      RowBox[{"pe", "=", 
+       RowBox[{"Length", "[", "cuts", "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"While", "[", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"ph", "=", 
+          RowBox[{"Ceiling", "[", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"pb", "+", "pe"}], ")"}], "/", "2"}], "]"}]}], ";", 
+         "\[IndentingNewLine]", 
+         RowBox[{"traillen", "=", 
+          RowBox[{"Length", "[", 
+           RowBox[{"takeTokens", "[", 
+            RowBox[{"StringTake", "[", 
+             RowBox[{"text", ",", 
+              RowBox[{
+              "cuts", "\[LeftDoubleBracket]", "ph", 
+               "\[RightDoubleBracket]"}]}], "]"}], "]"}], "]"}]}], ";", 
+         RowBox[{"traillen", "\[NotEqual]", "halfpos"}]}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"If", "[", 
+          RowBox[{
+           RowBox[{"traillen", "<", "halfpos"}], ",", 
+           RowBox[{"pb", "=", "ph"}], ",", 
+           RowBox[{"pe", "=", "ph"}]}], "]"}], ";"}]}], "\[IndentingNewLine]",
+        "]"}], ";", "\[IndentingNewLine]", 
+      RowBox[{"subtext1", "=", 
+       RowBox[{"preprocessor", "[", 
+        RowBox[{"StringTrim", "[", 
+         RowBox[{"StringTake", "[", 
+          RowBox[{"text", ",", 
+           RowBox[{
+           "cuts", "\[LeftDoubleBracket]", "ph", "\[RightDoubleBracket]"}]}], 
+          "]"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"subtext2", "=", 
+       RowBox[{"preprocessor", "[", 
+        RowBox[{"StringTrim", "[", 
+         RowBox[{"StringTake", "[", 
+          RowBox[{"text", ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{
+              RowBox[{
+              "cuts", "\[LeftDoubleBracket]", "ph", "\[RightDoubleBracket]"}],
+               "+", "1"}], ",", 
+             RowBox[{"-", "1"}]}], "}"}]}], "]"}], "]"}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"{", 
+       RowBox[{"tokens1", ",", "tokens2", ",", "subtext1", ",", "subtext2"}], 
+       "}"}]}]}], "\[IndentingNewLine]", "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.76678526475861*^9, 3.7667852906819563`*^9}, {
+   3.76678534108884*^9, 3.766785612294821*^9}, {3.766785656741393*^9, 
+   3.766785735665122*^9}, {3.766785765989788*^9, 3.76678580790201*^9}, {
+   3.7667858742395678`*^9, 3.7667859483766823`*^9}, {3.7667860121189632`*^9, 
+   3.766786085995386*^9}, {3.766786634804784*^9, 3.7667866407447844`*^9}, {
+   3.766786722348218*^9, 3.766786723369808*^9}, {3.766787041835367*^9, 
+   3.766787120479018*^9}, {3.766787322550131*^9, 3.766787401501298*^9}, {
+   3.766787438937958*^9, 3.766787439974872*^9}, {3.76679480152175*^9, 
+   3.7667948372112226`*^9}, {3.766794872817395*^9, 3.766795251736245*^9}, {
+   3.766795419642709*^9, 3.766795442271286*^9}, {3.766795535712603*^9, 
+   3.766795594106677*^9}, {3.766878653267007*^9, 3.766878655815982*^9}, {
+   3.7669225237511063`*^9, 3.7669225254233923`*^9}, {3.766922666273129*^9, 
+   3.766922696668211*^9}, {3.76692320304278*^9, 3.766923311712626*^9}, {
+   3.766924356461397*^9, 3.7669244108545513`*^9}, {3.766924496334489*^9, 
+   3.76692458245551*^9}, {3.766924708507921*^9, 3.766924720512882*^9}, {
+   3.766924795077168*^9, 3.766924798977695*^9}, {3.7669261524978733`*^9, 
+   3.7669262187546797`*^9}, {3.7669262564799356`*^9, 3.766926271392089*^9}, {
+   3.7669264834601727`*^9, 3.766926503209577*^9}, {3.7669266562624063`*^9, 
+   3.766926672630275*^9}, {3.7669270016138897`*^9, 3.766927070793908*^9}, {
+   3.7669271402271147`*^9, 3.766927175228612*^9}, {3.766927219945888*^9, 
+   3.766927223955011*^9}, {3.76692729638033*^9, 3.766927366522893*^9}, {
+   3.766927428461289*^9, 3.766927428629635*^9}, {3.7669275577856827`*^9, 
+   3.766927650563622*^9}, {3.766927680578266*^9, 3.766927719852641*^9}, {
+   3.7669277607721024`*^9, 3.76692799587945*^9}, {3.7669325446967897`*^9, 
+   3.766932566782975*^9}, 3.766934865205687*^9, {3.76693535590806*^9, 
+   3.766935399016268*^9}, {3.766935430486947*^9, 3.766935494661922*^9}, {
+   3.76693552500495*^9, 3.766935533775435*^9}, {3.766936039600625*^9, 
+   3.766936051684461*^9}, {3.766936082782063*^9, 3.7669361282784853`*^9}, {
+   3.76693615954281*^9, 3.766936162936014*^9}, {3.7669363542000933`*^9, 
+   3.766936398179001*^9}, {3.766936539344096*^9, 3.766936563960951*^9}, {
+   3.766937555366749*^9, 3.766937559758807*^9}, {3.766938766141378*^9, 
+   3.766938786868231*^9}, {3.76693913893871*^9, 3.7669391902612553`*^9}, 
+   3.766939300284357*^9, {3.766939408095056*^9, 3.766939435570093*^9}, {
+   3.766939479952623*^9, 3.766939482069949*^9}, {3.766939572647155*^9, 
+   3.7669396965008593`*^9}, {3.7669397917169743`*^9, 3.76693981275418*^9}, {
+   3.76694043009951*^9, 3.766940433498074*^9}, {3.7669406754537897`*^9, 
+   3.766940683252019*^9}, {3.766940714293449*^9, 3.766940739290062*^9}, {
+   3.766941563760303*^9, 3.766941565928713*^9}, 3.76694267243673*^9, {
+   3.7669432167677603`*^9, 3.7669432385093613`*^9}, {3.766943279542362*^9, 
+   3.766943296903933*^9}, {3.7669441443424788`*^9, 3.7669441484602737`*^9}, {
+   3.766960743750383*^9, 3.76696077049424*^9}},
+ CellLabel->"In[35]:=",ExpressionUUID->"2bbd4c16-762b-4ce6-9f27-988b85c9a7e9"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"foldpath", "=", "\"\</path_to/GutenbergAll_split/\>\""}], ";", 
+  RowBox[{"(*", 
+   RowBox[{"fold", " ", "to", " ", "store", " ", "splitted", " ", "files"}], 
+   "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"If", "[", 
+   RowBox[{
+    RowBox[{"!", 
+     RowBox[{"DirectoryQ", "[", "foldpath", "]"}]}], ",", 
+    RowBox[{
+     RowBox[{"CreateDirectory", "[", "foldpath", "]"}], ";"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"exportfiles", "[", "file_String", "]"}], ":=", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "filebase", ",", "tokens1", ",", "tokens2", ",", "subtext1", ",", 
+       "subtext2"}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"filebase", "=", 
+       RowBox[{"FileBaseName", "[", "file", "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"tokens1", ",", "tokens2", ",", "subtext1", ",", "subtext2"}],
+         "}"}], "=", 
+       RowBox[{"splitTextNewton", "[", "file", "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Export", "[", 
+       RowBox[{
+        RowBox[{"foldpath", "<>", "filebase", "<>", "\"\<tokens_1.dat\>\""}], 
+        ",", "tokens1"}], "]"}], ";", "\[IndentingNewLine]", 
+      RowBox[{"Export", "[", 
+       RowBox[{
+        RowBox[{"foldpath", "<>", "filebase", "<>", "\"\<tokens_2.dat\>\""}], 
+        ",", "tokens2"}], "]"}], ";", "\[IndentingNewLine]", 
+      RowBox[{"Export", "[", 
+       RowBox[{
+        RowBox[{"foldpath", "<>", "filebase", "<>", "\"\<_1.txt\>\""}], ",", 
+        "subtext1"}], "]"}], ";", 
+      RowBox[{"Export", "[", 
+       RowBox[{
+        RowBox[{"foldpath", "<>", "filebase", "<>", "\"\<_2.txt\>\""}], ",", 
+        "subtext2"}], "]"}], ";"}]}], "\[IndentingNewLine]", "]"}]}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.766795309408827*^9, 3.766795341084906*^9}, {
+   3.766796137710607*^9, 3.766796233727508*^9}, {3.766797212995242*^9, 
+   3.766797297385274*^9}, {3.766932539032119*^9, 3.766932539890799*^9}, {
+   3.766932642627384*^9, 3.7669328440205507`*^9}, {3.7669329285248957`*^9, 
+   3.766932945803176*^9}, 3.766942649938325*^9, {3.76694310098488*^9, 
+   3.766943106011582*^9}, {3.769104782612873*^9, 3.7691047920221167`*^9}, {
+   3.7722066804123917`*^9, 3.772206686540556*^9}, {3.772300855017061*^9, 
+   3.7723008555426397`*^9}, {3.7839678978937597`*^9, 
+   3.7839679069650173`*^9}, {3.785632129008939*^9, 3.785632132511483*^9}, {
+   3.7857670648359327`*^9, 3.785767068719849*^9}, {3.7924276023427*^9, 
+   3.79242763951097*^9}},ExpressionUUID->"1d35ca49-40e6-42f2-993f-\
+7cd01e413e5d"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"SetDirectory", "[", "\"\</path_to/GutenbergAll\>\"", "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"files", "=", 
+   RowBox[{"FileNames", "[", "\"\<*.txt\>\"", "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.7667641442527323`*^9, 3.7667641724395933`*^9}, {
+   3.766786781355118*^9, 3.7667867927589397`*^9}, 3.76910481950194*^9, {
+   3.772206702265285*^9, 3.772206709052301*^9}, {3.77230088520224*^9, 
+   3.772300885459116*^9}, {3.772310171686961*^9, 3.772310174120564*^9}, {
+   3.783968026768199*^9, 3.783968035409872*^9}, {3.785632140209156*^9, 
+   3.785632146223393*^9}, {3.7857670861083593`*^9, 3.785767088925448*^9}, 
+   3.792427602353594*^9, {3.792427653924522*^9, 
+   3.7924276558165913`*^9}},ExpressionUUID->"f46dadb2-6316-49df-8037-\
+f2a0ffbcd288"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"CloseKernels", "[", "]"}], ";", 
+  RowBox[{"LaunchKernels", "[", "4", "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"DistributeDefinitions", "[", 
+   RowBox[{
+   "clist", ",", "splitTextNewton", ",", "takeTokens", ",", "exportfiles"}], 
+   "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.766797396636635*^9, 3.766797416757213*^9}, {
+  3.7667974564927588`*^9, 3.7667974945740833`*^9}, {3.766797594104253*^9, 
+  3.7667975954252377`*^9}, {3.76683384854456*^9, 3.766833848677417*^9}, {
+  3.766941601276764*^9, 3.766941601951585*^9}, {3.766941649910096*^9, 
+  3.7669416515453377`*^9}, {3.7691048338197603`*^9, 3.769104838218267*^9}, {
+  3.77220672262871*^9, 3.772206723848792*^9}},
+ CellLabel->"In[46]:=",ExpressionUUID->"7cd18c6a-d1be-4c7e-9774-3d543aaf4554"],
+
+Cell["Creating these files....", "Text",
+ CellChangeTimes->{{3.7924276700338163`*^9, 
+  3.792427681727277*^9}},ExpressionUUID->"21946f03-ba53-43b4-9e40-\
+38674e0008b7"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ParallelMap", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"exportfiles", "[", "#", "]"}], "&"}], ",", "files"}], "]"}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.766797301596212*^9, 3.766797306405693*^9}, {
+  3.766797383104662*^9, 3.7667973853731403`*^9}, {3.7667974220824547`*^9, 
+  3.766797438074478*^9}, {3.766797582609151*^9, 3.7667975848349257`*^9}},
+ CellLabel->"In[48]:=",ExpressionUUID->"77436f23-2218-44ff-a903-26a693937945"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Preparing processed files (*Proc fold)  by removing unnecessary ^M hidden \
+symbols from Windows system. This is important in comparing the sizes of the \
+original files (should be processed first) and the inverted or shuffled ones \
+\
+\>", "Subsection",
+ CellChangeTimes->{{3.79242695870288*^9, 
+  3.792427178617157*^9}},ExpressionUUID->"02d79c96-1cce-4c4d-a2a9-\
+47b5e1960aef"],
+
+Cell[TextData[{
+ StyleBox["Note:",
+  FontWeight->"Bold"],
+ " Files prepared under Windows are usually larger. The cause is the \
+difference between how a Windows based OS and a Unix based OS store the \
+end-of-line markers. Windows based operating systems, thanks to their DOS \
+heritage, store an end-of-line as a pair of characters - 0x0D0A (carriage \
+return + line feed). Unix-based operating systems just use 0x0A (a line \
+feed). The ^M one is seeing is a visual representation of 0x0D (a carriage \
+return). We recreated the original files by importing and then exporting the \
+files to remove these extra characters.  Therefore we should compare thus \
+processed files and their compressions, when inversion of shuffle of words \
+are performed. The above comparison between two halves though, doesn\
+\[CloseCurlyQuote]t poise such problem, because the two halves were obtained \
+when the original single file were split."
+}], "Text",
+ CellChangeTimes->{{3.792372039067431*^9, 3.792372049050355*^9}, {
+  3.792372100590659*^9, 3.792372105465847*^9}, {3.7923721379690866`*^9, 
+  3.792372490856844*^9}},ExpressionUUID->"efa2883d-600a-493d-ab2b-\
+4aba885b0354"],
+
+Cell["Just import the file first then ", "Text",
+ CellChangeTimes->{{3.792427210033237*^9, 
+  3.792427217279545*^9}},ExpressionUUID->"8758dc18-83db-4979-bc3b-\
+5b51ad21cd7a"],
+
+Cell[BoxData[
+ RowBox[{"Export", "[", 
+  RowBox[{"\"\</path_to_Proc/file\>\"", ",", 
+   RowBox[{"Import", "[", "\"\</path_to_original/file\>\"", "]"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.79242718915765*^9, 
+  3.792427313557193*^9}},ExpressionUUID->"1acbc3b3-ad4c-440d-9e50-\
+c9fdf701dfe3"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["To compress files use for example", "Subsection",
+ CellChangeTimes->{{3.792427702671494*^9, 
+  3.792427735840711*^9}},ExpressionUUID->"c04188e2-2c34-4149-b812-\
+c55539ca4f73"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+   "Run", "[", 
+    "\"\<cd /path_to/GutenbergAllReverse/; SAVEIFS=$IFS; IFS=$(echo -en \
+\\\"\\\\n\\\\b\\\"); for file in `ls *.txt`; do filename=`basename \
+\\\"$file\\\" .txt`; zip \\\"$filename.zip\\\" \\\"$file\\\"; done; \
+IFS=$SAVEIFS\>\"", "]"}], ";"}], 
+  RowBox[{"(*", 
+   RowBox[{"compress", " ", "files"}], "*)"}]}]], "Input",
+ CellChangeTimes->{{3.792427724417819*^9, 
+  3.792427742228415*^9}},ExpressionUUID->"e56cc41f-bba8-4e48-badb-\
+fbf878c77e32"]
+}, Open  ]]
+},
+WindowSize->{1920, 1013},
+WindowMargins->{{0, Automatic}, {0, Automatic}},
+FrontEndVersion->"11.3 for Linux x86 (64-bit) (March 6, 2018)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 355, 6, 56, "Subsection",ExpressionUUID->"73c8b56e-ea80-4457-9745-bea6e5be361e",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.}],
+Cell[938, 30, 9013, 139, 434, "Input",ExpressionUUID->"4df1976b-ce9f-4e44-b17f-3705e290e52e",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.}]
+}, Open  ]],
+Cell[9966, 172, 561, 11, 37, "Text",ExpressionUUID->"ba7c043d-061c-41de-8480-5766ef996977"],
+Cell[10530, 185, 966, 27, 59, "Input",ExpressionUUID->"c21ff462-2051-4951-a27d-652c9f9e503f"],
+Cell[CellGroupData[{
+Cell[11521, 216, 224, 7, 56, "Subsection",ExpressionUUID->"d1be2427-4018-45e7-9af9-3aa5d31bc4e0"],
+Cell[11748, 225, 2954, 68, 384, "Input",ExpressionUUID->"a4b5de4f-50f3-4402-8c13-8cf1e519f94d"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14739, 298, 229, 4, 56, "Subsection",ExpressionUUID->"adf0c312-dbaf-42aa-b7d1-e21d027b6efa"],
+Cell[14971, 304, 7268, 146, 534, "Input",ExpressionUUID->"2bbd4c16-762b-4ce6-9f27-988b85c9a7e9"],
+Cell[22242, 452, 2651, 60, 234, "Input",ExpressionUUID->"1d35ca49-40e6-42f2-993f-7cd01e413e5d"],
+Cell[24896, 514, 808, 15, 59, "Input",ExpressionUUID->"f46dadb2-6316-49df-8037-f2a0ffbcd288"],
+Cell[25707, 531, 802, 15, 59, "Input",ExpressionUUID->"7cd18c6a-d1be-4c7e-9774-3d543aaf4554"],
+Cell[26512, 548, 168, 3, 37, "Text",ExpressionUUID->"21946f03-ba53-43b4-9e40-38674e0008b7"],
+Cell[26683, 553, 469, 10, 33, "Input",ExpressionUUID->"77436f23-2218-44ff-a903-26a693937945"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[27189, 568, 389, 8, 85, "Subsection",ExpressionUUID->"02d79c96-1cce-4c4d-a2a9-47b5e1960aef"],
+Cell[27581, 578, 1164, 19, 112, "Text",ExpressionUUID->"efa2883d-600a-493d-ab2b-4aba885b0354"],
+Cell[28748, 599, 174, 3, 37, "Text",ExpressionUUID->"8758dc18-83db-4979-bc3b-5b51ad21cd7a"],
+Cell[28925, 604, 298, 7, 33, "Input",ExpressionUUID->"1acbc3b3-ad4c-440d-9e50-c9fdf701dfe3"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[29260, 616, 181, 3, 56, "Subsection",ExpressionUUID->"c04188e2-2c34-4149-b812-c55539ca4f73"],
+Cell[29444, 621, 511, 13, 62, "Input",ExpressionUUID->"e56cc41f-bba8-4e48-badb-fbf878c77e32"]
+}, Open  ]]
+}
+]
+*)
+
