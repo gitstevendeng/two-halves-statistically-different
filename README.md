@@ -1,4 +1,4 @@
-# zipf-halves
+# two-halves-statistically-different
 Text data and Mathematica codes for the paper "Two halves of a meaningful text are statistically different"
 
 1. Mathematica notebooks
