@@ -1,5 +1,5 @@
 # zipf-halves
-Text data and Mathematica codes for the paper "Relating the Zipf ’s law to textual information"
+Text data and Mathematica codes for the paper "Two halves of a meaningful text are statistically different"
 
 1. Mathematica notebooks
   a. prep-split.nb: tokenization of strings and splitting texts into two halves.
