@@ -19,3 +19,6 @@ Text data and Mathematica codes for the paper "Two halves of a meaningful text a
     b. Novels350Proc: ...
     c. Novels350Reverse: ...
     d. Novels350_split_1 + Novels350_split_2: Due to size limit on github, the zip file was splitted into two parts.
+
+
+For any questions concerning the codes, please contact RongRong Xie (emilyxierr@gmail.com) or Shengfeng Deng (gitsteven@gmai.com).
