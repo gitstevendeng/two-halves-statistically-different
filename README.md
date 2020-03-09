@@ -8,7 +8,7 @@ Text data and Mathematica codes for the paper "Two halves of a meaningful text a
   
 2. Text data
   I. 156 text set
-    a. GutenbergAll: the original 156 texts were retrieved from http://www.gutenberg.org/wiki/Category:Fiction_Bookshelf .
+    a. GutenbergAll: the original 156 texts were retrieved from http://www.gutenberg.org/wiki/Category:Fiction_Bookshelf.
     b. GutenbergAllProc: in cases where texts may contain hidden symbols "^M" due to preparations under Windows system, this folder contains 156 texts with these symbols removed.
     c. GutenbergAllReverse: 156 texts with their word orders inverted.
     d. GutenbergAll_Split: split each files "text" into two halves (text_1.txt and text_2.txt) and tokenize them (texttokens_1.dat and texttokens_2.dat)
